@@ -1,0 +1,15 @@
+#machine-note { max-width:80ch; margin-top:8px; }
+#camera-step { color:var(--mint); font-size:15px; }
+.key span:nth-child(2) { color:#f2a47e; }
+.key span:nth-child(3) { color:#c8c7ef; }
+.key span:last-child { color:#9ae1f2; }
+.inspector { padding:10px 12px; }
+.inspector label { margin-right:8px; }
+#part-note { color:var(--muted); font-size:14px; }
+#lab-slots [data-slot=blade] { border-left-color:#b5b6e7; }
+#lab-slots [data-slot=drill] { border-left-color:#92d4e4; }
+@media(max-width:550px) {
+  .camera-head { gap:4px; }
+  .key { gap:6px; }
+  .inspector { padding:7px; }
+}

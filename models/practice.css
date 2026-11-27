@@ -1,0 +1,73 @@
+.practice-link { display:inline-flex; align-items:center; min-height:44px; padding:2px 0; }
+.pin-options:not(:empty) { margin-bottom:12px; }
+.pin-options p { margin:6px 0; }
+.pin-options a { color:#a9dfd1; }
+.lab-panel workshop-station { display:block; margin:12px 0; background:#162e38; border-radius:8px; padding:10px; }
+.lab-panel workshop-station canvas { display:block; width:100%; height:220px; touch-action:none; }
+.lab-panel .station-head, .lab-panel .station-tools, .lab-panel .station-modes { display:flex; align-items:center; flex-wrap:wrap; gap:6px; }
+.lab-panel .station-head small, .lab-panel .station-head strong { display:block; }
+.lab-panel .station-tools button, .lab-panel .station-modes button { min-height:36px; }
+.order-embed header,.order-embed footer,.order-embed .lab-samples {display:none}
+.order-embed main {width:100%;padding:4px}
+.practice .story, .practice .secondary, .practice #drill-demo, .practice #play,
+.practice #previous-stage, .practice #next-stage, .practice .options, .practice .partinfo { display:none; }
+.practice .workstation { grid-template-columns:minmax(0,1.55fr) minmax(305px,1fr); }
+.lab-drive { border-bottom:1px solid var(--line); padding:12px; }
+.lab-buttons,.lab-fitting { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.lab-buttons button { flex:1 1 auto; }
+.lab-buttons [data-act="work"] { background:#365747; border-color:#82ab86; color:#efffe5; }
+#lab-message { min-height:1.6em; color:#ffdc99; margin:8px 0 0; }
+.lab-panel { padding:clamp(12px,1.4vw,22px); border:1px solid var(--line); border-radius:14px; background:var(--card); min-width:0; }
+#lab-slots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px; }
+#lab-slots button { text-align:left; border-left:4px solid #7498a9; }
+#lab-slots button[data-slot=drill1] { border-left-color:#90c7e9; }
+#lab-slots button[data-slot=drill2] { border-left-color:#a6a9e7; }
+#lab-slots button[data-slot=counter] { border-left-color:#85c7ab; }
+#lab-slots button[data-slot=tap] { border-left-color:#dbbc79; }
+#lab-slots span { display:block; font-size:13px; color:var(--muted); }
+.lab-fitting { margin-top:12px; }
+.lab-fitting label { font-size:14px; }
+.lab-fitting select { flex:1 0 auto; }
+#lab-guide, #lab-history { font-size:14px; color:var(--muted); }
+.lab-result,.lab-samples { padding-top:12px; margin-top:12px; border-top:1px solid var(--line); }
+.lab-panel h2 { font-size:17px; margin:0 0 8px; }
+.lab-panel svg { display:block; background:#15262f; width:100%; max-width:410px; border-radius:8px; }
+.lab-panel svg text { font:13px system-ui,sans-serif; fill:#dbe9e7; }
+#lab-shape { display:block; color:var(--mint); margin-bottom:6px; }
+#lab-history { display:flex; flex-wrap:wrap; gap:8px; }
+#lab-history figure { flex:1 1 145px; min-width:0; margin:0; }
+#lab-history figcaption { font-size:13px; color:var(--ink); padding-bottom:4px; }
+#lab-history svg text { display:none; }
+.practice button:disabled { opacity:.65; cursor:default; }
+@media(max-width:880px){
+  .practice .workstation { grid-template-columns:minmax(0,1fr); }
+  .practice .workspace .selection,.practice .workspace .part-caption,.practice .workspace .gesture { display:none; }
+  .practice .stage canvas {height:clamp(200px,36vh,310px);}
+  .practice .lab-drive {padding:8px;}
+  .lab-buttons button { padding:6px 8px; font-size:14px; }
+}
+
+.compact-slot { display:none; }
+.lab-example { margin-top:4px; color:var(--muted); font-size:14px; }
+@media(max-width:880px){
+  .lab-panel #kit-title,.lab-panel #lab-slots { display:none; }
+  .compact-slot { display:flex; flex:1 0 100%; }
+  .compact-slot select { flex:1; min-width:0; }
+  .lab-drive .lab-fitting { margin:0 0 8px; }
+  .lab-fitting select { padding:6px; }
+  .lab-drive .lab-fitting label { font-size:13px; }
+}
+
+.d2-variants:not([hidden]) { display:inline-flex; flex-wrap:wrap; gap:4px; margin:6px 14px 0 0; }
+.d2-variants a { display:inline-flex; align-items:center; min-height:44px; padding:4px 12px; border:1px solid var(--line); border-radius:8px; color:var(--ink); text-decoration:none; }
+.d2-variants [aria-current="page"] { color:var(--mint); border-color:var(--mint); background:#314741; font-weight:700; }
+#lab-slots button[data-slot=groove] { border-left-color:#ed9977; }
+#lab-slots button[data-slot=parting] { border-left-color:#b5b5e8; }
+
+.d2-nav { display:flex; flex-wrap:wrap; gap:4px 16px; }
+.key.turning-key span:nth-child(2) { color:#f4aa87; }
+.key.turning-key span:last-child { color:#c3c2ef; }
+@media(max-width:550px) {
+  .d2-nav { font-size:13px; gap:2px 12px; }
+  .turning-key { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:1px 5px; }
+}

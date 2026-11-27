@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="../d2/explorer.css"><link rel="stylesheet" href="../practice.css"><link rel="stylesheet" href="swiss.css">
+<title>스위스형 CNC 공구 실습 · Machine Explorer</title>
+</head>
+<body>
+<header>
+<nav aria-label="공부방" class="d2-nav"><a href="../../swiss-cnc/">← 스위스형 CNC 가이드</a><a href="../d2/index.html?mode=practice">D2 실습</a><a href="../d5/index.html?mode=practice">D5 실습</a></nav>
+<h1 id="title">스위스형 CNC 공구 실습</h1>
+<p>봉재에 홈을 낸 뒤 핀을 반대편 주축으로 넘겨 보세요. 방금 잘린 면에 드릴이 닿는 과정을 볼 수 있습니다.</p>
+<nav class="d2-variants" aria-label="기종 선택"><a id="star" href="?model=star">STAR SR-10J type C</a><a id="deco" href="?model=deco">Tornos DECO 10a</a></nav>
+<p id="machine-note"></p>
+</header>
+<main>
+<section class="workstation" aria-label="가공 실습">
+<div class="workspace">
+<div class="camera-head"><strong id="camera-step">소재 이송 전</strong><span class="key"><span>● 봉재·핀</span><span>● 홈 날</span><span>● 절단 날</span><span>● 배면 드릴</span></span></div>
+<div class="detail-views" role="group" aria-label="가공부 확대 시점"><button type="button" data-detail="cut" aria-pressed="false">가이드 부시·날끝</button><button type="button" data-detail="pickup" aria-pressed="false">부주축·배면 가공</button><button type="button" data-bore aria-pressed="false">부시·콜릿 단면</button></div>
+<p class="bore-note" hidden>구리색 면은 잘라 본 금속이고, 가운데 금색은 소재입니다. 드래그로 시점을 돌려 소재가 어디까지 물렸는지 확인하세요.</p>
+<div class="stage"><canvas id="view" tabindex="0" role="img" aria-label="스위스형 CNC 가공부. 좌우 방향키로 회전하고 더하기와 빼기로 확대·축소합니다. 아래 부품 찾기에서 각 부분을 선택할 수 있습니다."></canvas></div>
+<div class="camera-dock" role="group" aria-label="시점"><button data-camera="left">↶ 왼쪽</button><button data-camera="right">↷ 오른쪽</button><button data-camera="in" aria-label="확대">＋</button><button data-camera="out" aria-label="축소">−</button><button data-camera="home">처음 시점</button></div>
+<div class="inspector"><label for="part">부품 찾기</label><select id="part"></select><p id="part-note"></p></div>
+</div>
+</section>
+</main>
+<footer><details><summary>기종과 모델의 근거</summary>
+<p id="scope"></p><p>날의 위치, 가공 시간, 이동 거리와 받이는 핀의 양쪽 끝이 보이도록 단순화했습니다. 버튼은 가상 핀의 가공 단계를 나누어 보여줍니다. 현장 호기별 공구 배치와 옵션은 확인이 필요합니다.</p>
+<p><a id="source" target="_blank" rel="noreferrer">제조사 자료</a></p></details></footer>
+<script src="../machine-shapes.js"></script><script src="../d2/depth-surface.js"></script><script type="module" src="../practice-panel.js"></script><script type="module" src="practice.js"></script>
+</body></html>

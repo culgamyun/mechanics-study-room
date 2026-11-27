@@ -1,0 +1,5 @@
+:HL["/mechanics-study-room/_next/static/chunks/25tky02d85z3t.css","style"]
+:HC["/",""]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"glossary","h":96,"c":"$Q2"}]]
+0:{"b":"pyTxW21muZeCfw620pxKm","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

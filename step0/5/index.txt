@@ -1,0 +1,35 @@
+1:"$Sreact.fragment"
+2:"/mechanics-study-room/_next/static/chunks/3qfy96eoyh-ek.js"
+3:"/mechanics-study-room/_next/static/chunks/1rpu9db4xtojl.js"
+4:"/mechanics-study-room/_next/static/chunks/369pfn379r11a.js"
+5:"/mechanics-study-room/_next/static/chunks/29zm_4uq1zr5c.js"
+6:I[4121,["$2","$3","$4","$5"],"Shell"]
+7:I[39756,["$2","$3","$4","$5"],"default"]
+8:I[37457,["$2","$3","$4","$5"],"default"]
+9:I[22016,["$2","$3","$4","$5"],""]
+f:I[97367,["$2","$3","$4","$5"],"OutletBoundary"]
+10:"$Sreact.suspense"
+12:"ViewportBoundary"
+13:I[97367,["$2","$3","$4","$5"],"$12"]
+15:"MetadataBoundary"
+16:I[97367,["$2","$3","$4","$5"],"$15"]
+18:I[68027,["$2","$3","$4","$5"],"default",1]
+:HL["/mechanics-study-room/_next/static/chunks/25tky02d85z3t.css","style"]
+:HC["/",""]
+:HL["/mechanics-study-room/_next/static/chunks/2dgkodgpy16fl.css","style"]
+:HL["/mechanics-study-room/_next/static/chunks/09g5-ru2_kffr.css","style"]
+b:X
+d:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$Le",[["$","link","0",{"rel":"stylesheet","href":"/mechanics-study-room/_next/static/chunks/2dgkodgpy16fl.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/mechanics-study-room/_next/static/chunks/09g5-ru2_kffr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/mechanics-study-room/_next/static/chunks/1n_d_klr2sdpo.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/mechanics-study-room/_next/static/chunks/0wehxxh7jlmm5.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/mechanics-study-room/_next/static/chunks/0193oi43vwn50.js","async":true,"nonce":"$undefined"}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":false,"v":null}}]]
+c:[["children",{"s":{"n":"unit","t":"d","k":"5","s":["map"]},"h":66048,"d":{"r":["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$b"},"c":"$Qd"}]]
+a:[["children",{"s":"step0","h":131584,"d":{"r":["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$b"},"c":"$Qc"}]]
+0:{"P":null,"c":["","step0","5",""],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/mechanics-study-room/_next/static/chunks/25tky02d85z3t.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/mechanics-study-room/_next/static/chunks/3qfy96eoyh-ek.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/mechanics-study-room/_next/static/chunks/1rpu9db4xtojl.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/mechanics-study-room/_next/static/chunks/369pfn379r11a.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/mechanics-study-room/_next/static/chunks/29zm_4uq1zr5c.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":["$","body",null,{"children":["$","$L6",null,{"trackSummary":{"written":29,"activeDays":[1,2,4,5,6,7,8,9,11,12,13,14,16,17,19,24,25,33,23,36,41,42,43,46,47,48,49,50,51,52,21,22,28,30,31,32,20,40,44,45]},"children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"empty-state","children":[["$","h1",null,{"children":"이 학습 페이지를 찾을 수 없어요."}],["$","p",null,{"children":"상세 학습 트랙에서 다시 선택해 주세요."}],["$","$L9",null,{"className":"button primary","href":"/curriculum","children":"커리큘럼으로"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],"p":false,"v":null},"c":"$Qa"},"h":{"r":["$","$1","h",{"children":[null,["$","$L13",null,{"children":"$L14"}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":"$L17"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$18",[["$","link","0",{"rel":"stylesheet","href":"/mechanics-study-room/_next/static/chunks/25tky02d85z3t.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"pyTxW21muZeCfw620pxKm"}
+19:"/mechanics-study-room/_next/static/chunks/1n_d_klr2sdpo.js"
+1a:"/mechanics-study-room/_next/static/chunks/0wehxxh7jlmm5.js"
+1b:"/mechanics-study-room/_next/static/chunks/0193oi43vwn50.js"
+1c:I[83522,["$2","$3","$4","$5","$19","$1a","$1b"],"Step0UnitPage"]
+b:C
+e:["$","$L1c",null,{"unitId":"u5"}]
+14:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1d:I[27201,["$2","$3","$4","$5"],"IconMark"]
+11:null
+17:[["$","title","0",{"children":"Step 0 · 5단원 체결·지지 요소 | 기계·자동화 공부방"}],["$","meta","1",{"name":"description","content":"개발자를 위한 기계·정밀가공·자동화 기초 학습. Step 0 입문서 길잡이, 현장 온보딩 경로, 3개 트랙의 상세 과정과 나만의 복습 노트."}],["$","link","2",{"rel":"icon","href":"/mechanics-study-room/icon.svg?icon.15z1hxbvonv4c.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1d","3",{}]]

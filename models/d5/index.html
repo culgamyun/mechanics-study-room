@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="../d2/explorer.css"><link rel="stylesheet" href="../d2/studio.css"><link rel="stylesheet" href="d5.css"><link rel="stylesheet" href="../practice.css">
+<title>D5 정면 가공과 터릿 · Machine Explorer</title>
+</head>
+<body>
+<header><nav class="back-links" aria-label="공부방 탐색"><a href="../../step0/8/">← Step 0 · 8단원</a><a href="../../d5/">D5 학습 가이드</a><a href="../d2/index.html">D2와 비교</a><a id="d2-practice-link" href="../d2/index.html?mode=practice" hidden>D2 공구 실습</a><a href="../../swiss-cnc/#sw-explore">스위스형 CNC 실습</a></nav>
+<h1>D5 정면 가공 탐색기</h1>
+<p id="intro">금색 선재의 끝에 드릴로 구멍을 내고, 콜릿으로 잡아 핀 한 개를 잘라 냅니다.</p>
+<nav class="variants" aria-label="D5 형식"><a id="cam-link" href="index.html" aria-current="page">캠식 FLEX SPEED</a><a id="cnc-link" href="index.html?variant=cnc">제조사 표준 CNC</a></nav>
+<a class="practice-link" id="practice-link" href="index.html?mode=practice">공구 탈부착 실습 열기 →</a>
+<a class="practice-link" id="studio-link" href="?view=studio">정면 드릴 3D 관찰실 열기 →</a>
+<p class="variant-note" id="variant-note"></p></header>
+<main>
+<section class="d2-studio d5-drill" hidden aria-labelledby="drill-title">
+<div class="d2s-title"><div><span class="d2s-meta" data-variant></span><h2 id="drill-title">정면 드릴 관찰실</h2></div>
+<nav aria-label="관찰실 형식"><a href="?view=studio">캠식 터릿</a><a href="?view=studio&amp;variant=cnc">CNC 테이블</a><a data-exit href="index.html">전체 공정으로</a></nav></div>
+<div class="d2s-toolbar"><div class="d2s-transport"><button type="button" data-play class="d2s-play">장면 재생</button>
+<label>관찰 시점 <select data-moment><option value="" disabled>진행 위치</option><option value="4">정렬 전</option><option value="5">축 정렬</option><option value="5.47">절삭 중</option><option value="5.61">최대 깊이</option><option value="6">후퇴 완료</option></select></label>
+<input type="range" min="4" max="6" step=".01" value="4" aria-label="정면 드릴 진행 위치"></div>
+<button type="button" data-reset>시점 복원</button></div>
+<div class="d2s-grid"><canvas aria-hidden="true"></canvas>
+<div class="d2s-scope machine"><div class="d2s-label"><strong>정면 공구대</strong><span>드래그로 회전</span></div><div class="d2s-port" data-port="machine" tabindex="0" role="group" aria-label="정면 공구대 시점. 방향키로 회전"></div></div>
+<div class="d2s-scope close"><div class="d2s-label"><strong>드릴과 핀 끝면</strong><span>비스듬히 본 접촉부</span></div><div class="d2s-port"></div></div></div>
+<div class="d2s-label"><strong>핀의 축단면</strong><span data-phase></span></div>
+<svg class="drill-section" role="img" aria-label="정면 드릴과 막힌 구멍의 축단면"></svg>
+<p class="d2s-note" data-caption></p>
+</section>
+<section class="workstation" aria-label="3D 탐색과 재생">
+<div class="workspace">
+<div class="camera-head"><div class="presets" aria-label="시야 범위">
+<button id="overview" aria-pressed="true">전체 배치</button><button id="process" aria-pressed="false">가공부 확대</button><button id="drill-demo">정면 가공부터 보기</button></div>
+<span class="key"><span>● 선재·핀</span><span>● 절삭 날</span><span>● 드릴 1</span></span></div>
+<div class="stage-nav" role="group" aria-label="가공 흐름 단계">
+<span id="camera-step"></span><button id="previous-stage" aria-label="이전 단계">‹ 이전</button><button id="next-stage" aria-label="다음 단계">다음 ›</button></div>
+<div class="detail-views" role="group" aria-label="가공부 확대 시점"><button type="button" data-detail="cut" aria-pressed="false">선재·회전 헤드</button><button type="button" data-detail="pickup" aria-pressed="false">정면 공구대</button><button type="button" data-bore aria-pressed="false">부시·콜릿 단면</button></div>
+<p class="bore-note" hidden>구리색 면은 잘라 본 금속이고, 가운데 금색은 소재입니다. 드래그로 시점을 돌려 소재가 어디까지 물렸는지 확인하세요.</p>
+<div class="stage"><canvas id="view" tabindex="0" role="img" aria-label="D5 부품 모형. 방향키로 회전하고 더하기·빼기로 확대할 수 있습니다. 부품 선택 목록은 그림 아래에 있습니다."></canvas></div>
+<div class="camera-dock" role="group" aria-label="시점 조작">
+<button id="play" class="primary" aria-pressed="false">전체 흐름 재생</button>
+<button id="left" aria-label="왼쪽 회전">↶ <span>왼쪽</span></button><button id="right" aria-label="오른쪽 회전">↷ <span>오른쪽</span></button>
+<button id="zoomout" aria-label="축소">−</button><button id="zoomin" aria-label="확대">＋</button>
+<button id="front">정면</button><button id="top">위에서</button><button id="reset">시점 초기화</button></div>
+<div class="selection"><label for="part-picker">부품 찾기</label><select id="part-picker"></select><button id="isolate" aria-pressed="false">이 부품만 보기</button></div>
+<p class="part-caption" id="description"></p><p class="gesture" id="pick-hint">드래그로 돌리고, 보이는 부품을 눌러 이름을 확인하세요.</p>
+<details class="options"><summary>번호 표시와 추가 조작</summary><div class="tools">
+<label><input type="checkbox" id="numbers"> 전체 번호</label><label>간격 벌리기 <input id="explode" type="range" min="0" max="1" step=".05" value="0"></label><button id="rotate" aria-pressed="false">헤드 회전 보기</button><button id="export">Blender용 OBJ 저장</button></div><p id="motion-note"></p><div id="status" role="status"></div></details>
+</div>
+<section class="story" aria-labelledby="flow-title"><h2 id="flow-title">소재가 부품이 되는 흐름</h2>
+<div class="transport"><label>속도 <select id="speed"><option value=".5">0.5배</option><option value="1" selected>1배</option><option value="2">2배</option></select></label><label><input id="repeat" type="checkbox"> 반복</label></div>
+<div class="timeline"><label for="timeline">진행 위치</label><output id="progress-text">0%</output>
+<input id="timeline" type="range" min="0" max="9" step=".01" value="0"></div>
+<div class="steps" id="stage-buttons" aria-label="공정 선택"></div>
+<div class="step-detail" aria-live="polite"><strong id="stage-title"></strong><p id="stage-text"></p></div>
+<p class="hint" id="stage-observe"></p><div class="states"><span id="feed-state"></span><span id="grip-state"></span><span id="part-state"></span></div>
+<div class="tools"><button id="restart">처음으로</button></div></section>
+</section>
+<section class="partinfo" aria-label="선택한 부품 설명"><h2 id="name">선택한 부품</h2><p id="look"></p><details><summary>부품의 근거와 표현 범위</summary><p id="evidence"></p><p id="uncertain"></p><p id="source"></p></details><button id="next">다음 부품 →</button></section>
+<section class="secondary">
+<section class="cross-section" aria-labelledby="cut-title"><h2 id="cut-title">옆에서 본 핀의 단면</h2>
+<p>드릴이 빠진 뒤에도 금색 핀 안에 남는 빈 공간을 찾아보세요.</p>
+<svg id="side" viewBox="0 0 480 210" role="img" aria-labelledby="side-title side-desc"><title id="side-title">가공 중인 소재와 핀의 길이 방향 단면</title><desc id="side-desc">공정 진행에 따라 생기는 구멍, 절단 목, 드릴과 콜릿의 위치를 표시합니다.</desc>
+<path class="axis" d="M12 105H468"/>
+<path d="M14 93H145V117H14Z" fill="#c99e56"/>
+<g fill="#8da7ae"><path d="M64 77H111V91H64ZM64 119H111V133H64Z"/></g>
+<path id="pin-neck" fill="#d4a75c"/><path id="finished-pin" fill="#efc16e" stroke="#ffdda4" stroke-width="1.5" fill-rule="evenodd"/>
+<path id="next-stock" fill="#c99e56"/><path id="turn-tip" fill="#ed9977"/>
+<g id="side-drill"><rect x="293" y="93" width="77" height="24" rx="4" fill="#79bce8"/><path d="M293 99H268L259 105L268 111H293Z" fill="#dbe6e8"/><path d="M271 100l7 10m1-10 7 10" stroke="#617987" stroke-width="2"/></g>
+<g id="side-collet" fill="#86bda4"><path id="upper-jaw"/><path id="lower-jaw"/></g>
+<path d="M362 144v16h99v-16" fill="none" stroke="#96aeb3" stroke-width="4"/>
+<text x="16" y="59">선재</text><text x="60" y="153">가이드</text><text x="136" y="37">절삭 날</text><text id="side-tool-label" x="278" y="57"></text>
+<text id="side-note" x="14" y="193"></text></svg>
+</section>
+<section class="cross-section" aria-labelledby="station-title"><h2 id="station-title">소재 쪽에서 본 터릿</h2><p id="station-help"></p>
+<svg id="end" viewBox="0 0 370 190" role="img" aria-labelledby="end-title end-desc"><title id="end-title">정면 장치에서 선택되는 자리</title><desc id="end-desc">노란 십자는 고정된 선재의 축이고 색이 있는 원은 드릴과 콜릿의 자리입니다.</desc>
+<g id="station-carrier"></g>
+<path d="M74 112h14m18 0h14m-23-23v14m0 18v14" stroke="#ffda8d" stroke-width="2.3"/>
+<text x="12" y="175" fill="#ffda8d">십자 = 선재 중심</text><g id="station-key"></g></svg></section>
+</section></main>
+<footer><details><summary>자료와 실제 장비의 대응 범위</summary>
+<p>캠식 모델의 기준은 ESCO D5 FLEX SPEED입니다. 드릴 두 자리와 콜릿 한 자리를 가진 터릿, 이송 롤러와 회전 헤드의 기능을 반영했습니다. <a href="https://grasrl.it/wp-content/uploads/2019/08/D2-D5-A.pdf#page=3">ESCO FLEX SPEED 브로슈어 3~4쪽</a></p>
+<p>제조사 표준 D5 CNC는 2축 크로스 테이블에 드릴 주축 두 개, 나사 가공 주축 한 개, 카운터 콜릿을 싣습니다. 이 예제는 정면 가공에 집중합니다. 후면 가공 장치와 D5 ULTRA·TWIN은 별도 구성입니다. <a href="https://escomatic.ch/pdf/d2d5_cnc_2020-e.pdf#page=2">ESCO D2/D5 CNC 2020 브로슈어 2쪽</a></p>
+<p>리슨트 영문 카탈로그 PDF 14쪽에는 비회전 소재, 회전 공구, 절단 시 콜릿의 역할과 자체 CNC 개조가 소개됩니다. 현장 D5의 연식·장착 장치·개조 범위는 해당 호기에서 확인해야 합니다. 화면의 형상·시간·공구 순서는 학습용이며, 형식 전환은 제조사 두 모델을 비교합니다.</p>
+</details></footer>
+<script src="../machine-shapes.js"></script><script src="../esco-detail.js"></script><script src="../d2/cycle.js"></script><script src="../d2/depth-surface.js"></script>
+<script src="front.js"></script><script src="diagrams.js"></script><script src="practice-state.js"></script><script src="practice-motion.js"></script><script type="module" src="../practice-panel.js"></script><script src="practice.js"></script><script type="module" src="../d2/model.js"></script>
+</body></html>

@@ -1,0 +1,98 @@
+:root {
+  color-scheme: dark;
+  --page: #101c23;
+  --card: #192a32;
+  --line: #3c535e;
+  --ink: #f0f5f2;
+  --muted: #b7c8c9;
+  --mint: #c9e8a7;
+  font: 15px/1.6 system-ui, "Malgun Gothic", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); }
+header, main, footer { width: min(1480px, 100%); padding-inline: clamp(12px, 3vw, 44px); margin-inline: auto; }
+header { padding-block: 16px; }
+header p { margin: 4px 0; color: var(--muted); }
+a, summary { color: var(--mint); }
+h1 { font-size: clamp(24px,3vw,36px); margin: 6px 0 0; letter-spacing: -.035em; }
+h2 { font-size: 19px; margin: 0 0 10px; }
+button, select, summary, input { font: inherit; }
+button, select {
+  min-height: 44px; max-width: 100%; padding: 7px 12px; color: var(--ink);
+  background: #243942; border: 1px solid #597079; border-radius: 8px; cursor: pointer;
+}
+button:hover, button[aria-pressed=true] { background: #344d43; border-color: var(--mint); }
+button.primary { color: #15291e; background: var(--mint); border-color: var(--mint); font-weight: 700; }
+:focus-visible { outline: 3px solid #e4bd7a; outline-offset: 2px; }
+label { display: inline-flex; align-items: center; gap: 6px; }
+input { accent-color: var(--mint); }
+summary { cursor: pointer; padding-block: 10px; min-height: 44px; }
+p { margin: 6px 0; overflow-wrap: anywhere; }
+.workstation { display: grid; grid-template-columns: minmax(0, 1fr) minmax(290px, .4fr); gap: 14px; align-items: start; }
+.workspace, .story, .partinfo, .cross-section, .cam-lesson {
+  min-width: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--card);
+}
+.camera-head, .camera-dock, .selection, .tools, .transport, .presets, .states {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+}
+.camera-head, .camera-dock, .selection, .options { padding: 9px 12px; }
+.camera-head { justify-content: space-between; }
+.camera-dock { background: #21353d; border-block: 1px solid var(--line); }
+.camera-dock button { flex: 1 0 auto; }
+.stage-nav { display:flex; align-items:center; gap:5px; padding:3px 9px; border-block:1px solid var(--line); }
+.stage-nav span { flex:1; padding-left:3px; color:var(--mint); font-weight:650; font-size:14px; }
+.stage-nav button { padding-inline:10px; font-size:13px; }
+.stage-nav button:disabled { color:var(--muted); opacity:.58; cursor:default; }
+.stage { position: relative; background: radial-gradient(ellipse at 48% 35%,#344c57,#152630 85%); }
+.stage canvas { display: block; width: 100%; height: clamp(230px,47vh,520px); touch-action: none; cursor: grab; }
+.stage canvas:active { cursor: grabbing; }
+.selection { margin-top: 2px; }
+.selection select { flex: 1; min-width: 115px; }
+.selection label { font-weight: 650; }
+.options { padding-block: 0; color: var(--muted); font-size: 13px; }
+.options[open] { padding-bottom: 10px; }
+.tools > label, .transport > label { min-height: 44px; }
+.story, .partinfo, .cross-section, .cam-lesson { padding: clamp(12px,1.5vw,20px); }
+.story .tools button, select { font-size: 14px; }
+.timeline { margin-block: 10px; display: grid; grid-template-columns: 1fr auto; }
+.timeline input { grid-column: 1 / -1; width: 100%; min-height: 28px; }
+.steps { display: flex; flex-wrap: wrap; gap: 5px; }
+.steps button { font-size: 13px; padding: 5px 8px; }
+.step-detail { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 13px; }
+.step-detail strong { color: var(--mint); }
+.states { margin: 12px 0; gap: 5px 10px; color: #ecce99; font-size: 13px; }
+.hint, footer, .cross-section p, .cam-lesson p { font-size: 13px; color: var(--muted); }
+.partinfo { margin-top: 14px; }
+.secondary { margin-block: 14px; display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); gap: 14px; }
+.cut-scroll { overflow-x:auto; }
+.cut-scroll svg { display:block; width:100%; min-width:590px; }
+.cam-lesson svg { width:100%; height:auto; }
+.legend-name { fill: var(--ink); font: 15px system-ui,sans-serif; }
+footer { padding-block: 6px 26px; }
+footer details { border-bottom: 1px solid var(--line); }
+@media (max-width:880px) {
+  .workstation,.secondary { grid-template-columns:minmax(0,1fr); }
+  .stage canvas { height:clamp(220px,42vh,380px); }
+}
+@media (max-width:550px) {
+  header { padding-block:10px; }
+  .camera-head,.camera-dock,.selection { padding:7px; }
+  .camera-head .hint { display:none; }
+  .camera-dock button { padding:5px 8px; font-size:13px; }
+  .camera-dock { gap:4px; }
+  .selection label { font-size:13px; }
+  .selection { gap:4px; }
+  .selection select,.selection button { padding:5px; font-size:13px; }
+  .camera-dock .primary { flex-basis:100%; }
+  .stage canvas { height:clamp(175px,34vh,275px); }
+  .cam-lesson { overflow-x:auto; }
+  .cam-lesson svg { min-width:425px; }
+}
+
+.part-caption { margin: 0 12px 5px; color: var(--muted); font-size:14px; }
+
+.key {display:flex;flex-wrap:wrap;gap:10px;font-size:12px}.key span:first-child{color:#edcc84}.key span:last-child{color:#f4aa87}.gesture{color:var(--muted);font-size:12px;margin:4px 12px}
+.detail-views{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:6px 0}.detail-views button{border:1px solid #829e9c;border-radius:6px;padding:5px 11px;min-height:36px;background:#edf5f0;color:#224042}.detail-views button[aria-pressed=true]{background:#225d56;color:white;border-color:#225d56}
+.bore-note{font-size:14px;margin:0;padding:5px 10px;background:#263d45;color:#e9e2cf}.bore-note[hidden]{display:none}
+
+
